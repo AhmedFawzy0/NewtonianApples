@@ -1,12 +1,13 @@
 import { ReactDOM } from "react";
 import { BrowserRouter } from "react-router-dom";
-import Menu from "./components/Menu";
+import Menu from "./components/SideMenu";
+import HomePage from "./components/HomePage";
+import { Link } from "react-router-dom";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Menu />
-      
+      <HomePage />
     </BrowserRouter>
   )
 }

@@ -1,0 +1,29 @@
+.introduction-content {
+    display: flex;
+    flex-direction: column;
+    column-gap: 64px;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10%;
+    row-gap: 50px;
+}
+
+.introduction-appName {
+    position: absolute;
+    left: 0;
+    margin-left: 3%;
+    z-index: 1;
+    color: black;
+}
+
+.introduction {
+    position: relative;
+}
+
+.project-name-background {
+    background-color: 	#D3D3D3;
+    min-height: 20%;
+    z-index: 0;
+}
+
