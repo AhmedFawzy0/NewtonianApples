@@ -3,18 +3,9 @@
     color: slategrey;
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.copyright {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: inherit;
-    margin-right: inherit;
+    margin-right: 130px;
 }

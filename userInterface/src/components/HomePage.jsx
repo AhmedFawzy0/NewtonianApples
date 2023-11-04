@@ -2,6 +2,7 @@ import { useState } from "react";
 import SectionWrapper from "../hoc/SectionWrapper";
 import "./Introduction.css"
 import SideMenu from "./SideMenu";
+import { apple } from "../assets";
 
 const Introduction = () => {
     return (
@@ -10,15 +11,16 @@ const Introduction = () => {
                 <h1 className="introduction-appName">
                     Newtonian Apples
                 </h1>
+                <img src={apple} alt="appleIcon" className="project-icon"/>
             </div>
             <div className="introduction-content">
                 <h2>
-                    About this project
+                    Simulation Topics
                 </h2>
 
-                <p>
-                    Explanation
-                </p>
+                <div className="introduction-topics">
+
+                </div>
             </div>
         </div>
     )

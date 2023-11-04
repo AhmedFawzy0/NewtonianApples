@@ -2,7 +2,7 @@ import "./SectionWrapper.css"
 
 const CopyRight = () => {
     return (
-        <div className="copyright">
+        <div className="">
             <p>
                 &copy; - Eric, Ahmed, Jamie, Adam
             </p>

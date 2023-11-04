@@ -4,17 +4,16 @@
     column-gap: 64px;
     align-items: center;
     justify-content: center;
-
-    margin-top: 10%;
+    margin-top: 2%;
     row-gap: 50px;
 }
 
 .introduction-appName {
-    position: absolute;
     left: 0;
     margin-left: 3%;
     z-index: 1;
     color: black;
+    justify-content: start;
 }
 
 .introduction {
@@ -23,7 +22,24 @@
 
 .project-name-background {
     background-color: 	#D3D3D3;
-    min-height: 20%;
+    min-height: 30%;
     z-index: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.introduction-topics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-icon {
+    max-width: 50px;
+    max-height: 50px;
 }
 
