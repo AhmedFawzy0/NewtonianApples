@@ -7,7 +7,7 @@ import Simulator from "../hoc/Simulators";
 
 const Kinematics = () => {
     return (
-        Simulator("cannonBall//cannon-prototype-game")
+        Simulator("cannonBall//cannon-module-v1.1")
     )
 }
 
