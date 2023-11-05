@@ -1,0 +1,14 @@
+.newSection {
+    max-width: 1380px;
+    color: slategrey;
+    text-align: center;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 130px;
+}
+
+.copyright {
+    margin-top: 100px;
+}
