@@ -11,10 +11,17 @@ public class MeshGenerator : MonoBehaviour
     Vector3[] vertices;
     int[] triangles;
 
+    public float angle;
+    public float height;
+    public GameObject box;
+
     private PolygonCollider2D polygonCollider;
 
     void Start()
     {
+        angle = DataManager.Instance.variables[1];
+        height = DataManager.Instance.variables[0];
+
         polygonCollider = GetComponent<PolygonCollider2D>();
         mesh = new Mesh();
 
@@ -29,16 +36,18 @@ public class MeshGenerator : MonoBehaviour
             UpdateColliderFromMeshFilter();
         }
 
-
+        box.SetActive(true);
     }
 
     void CreateMesh()
     {
+        float bottomLength = height / Mathf.Tan(Mathf.Deg2Rad * angle);
+
         vertices = new Vector3[]
         {
-            new Vector3(0, -4, 0),
+            new Vector3(9 - bottomLength, -4, 0),
             new Vector3(9, -4, 0),
-            new Vector3(9, 0, 0)
+            new Vector3(9, -4 + height, 0)
         };
 
         triangles = new int[]
@@ -75,5 +84,4 @@ public class MeshGenerator : MonoBehaviour
         // Set the calculated points to the PolygonCollider2D
         polygonCollider.SetPath(0, colliderPoints);
     }
-
 }

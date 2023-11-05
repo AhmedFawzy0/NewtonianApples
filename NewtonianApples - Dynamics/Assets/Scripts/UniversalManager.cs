@@ -15,6 +15,11 @@ public class UniversalManager : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
+        if (levelIndex == 1)
+        {
+            DataManager.Instance.CollectData();
+        }
+
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(seconds);

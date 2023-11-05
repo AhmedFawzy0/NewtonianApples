@@ -7,7 +7,7 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
     public InputField[] inputFields;
-    public List<float> variables;
+    public float[] variables;
 
     // Start is called before the first frame update
     void Awake()
@@ -27,9 +27,16 @@ public class DataManager : MonoBehaviour
 
     public void CollectData()
     {
+        inputFields[0] = GameObject.Find("Height InputField").GetComponent<InputField>();
+        inputFields[1] = GameObject.Find("Angle InputField").GetComponent<InputField>();
+        inputFields[2] = GameObject.Find("Mass InputField").GetComponent<InputField>();
+        inputFields[3] = GameObject.Find("Friction InputField").GetComponent<InputField>();
+
+        int i = 0;
         foreach(InputField input in inputFields)
         {
-            variables.Add(float.Parse(input.text));
+            variables[i] = float.Parse(input.text);
+            i++;
         }
     }
 }
