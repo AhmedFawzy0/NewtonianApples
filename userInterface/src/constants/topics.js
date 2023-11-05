@@ -8,7 +8,7 @@ const topics = [
         name: "Dynamics"
     },
     {
-        id: "collision",
+        id: "collisions",
         name: "Elastic Collision"
     }
 ]

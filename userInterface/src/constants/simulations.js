@@ -1,17 +1,17 @@
-import { colDemo } from "../assets"
+import { cannonDemo, colDemo, dynamicsDemo } from "../assets"
 
 const simulations = [
     {
         id: "kinSim",
         name: "Kinematics Simulation",
         description: "",
-        image: ""
+        image: cannonDemo
     },
     {
         id: "dynamicsSym",
         name: "Dynamics Simulation",
         description: "",
-        image: ""
+        image: dynamicsDemo
     },
     {
         id: "collisionSym",
