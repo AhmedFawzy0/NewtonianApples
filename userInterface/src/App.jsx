@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import { Link } from "react-router-dom";
 import Kinematics from "./components/Kinematics";
+import { Collisions, Dynamics } from "./components";
 
 const App = () => {
   return (
@@ -10,8 +11,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} key={"home"}/>
         <Route path="/kinematics" element={<Kinematics />} key={"kin"}/>
-        <Route path="/dynamics" element={<></>} key={"dynamics"}/>     
-        <Route path="/collisions" element={<></>} key={"collisions"}/>
+        <Route path="/dynamics" element={<Dynamics />} key={"dynamics"}/>     
+        <Route path="/collisions" element={<Collisions />} key={"collisions"}/>
       </Routes>
     </BrowserRouter>
   )
