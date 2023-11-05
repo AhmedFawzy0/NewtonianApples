@@ -54,3 +54,11 @@
     border-color: slategray;
 }
 
+.navLinks {
+    text-decoration: none;
+    color: slategray
+}
+
+.navLinks:hover {
+    color: black;
+}

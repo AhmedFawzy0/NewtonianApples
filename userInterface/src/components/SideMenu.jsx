@@ -25,8 +25,8 @@ const SideMenu = () => {
                     alignItems: "center"
                 }}>
                     {topics.map((topic) => (
-                        <Link to={`/${topic.id}`}>
-                            <div key={topic.id}>
+                        <div key={topic.id}>
+                            <Link to={`/${topic.id}`} className='navLinks'>
                                 <ListItem sx={{
                                     minHeight: "80px",
                                     paddingBottom: "10%",
@@ -46,8 +46,9 @@ const SideMenu = () => {
                                     marginTop: "5px",
                                     marginBottom: "5px"
                                 }} />
-                            </div>
-                        </Link>
+                            </Link>
+                        </div>
+
                     ))}
                 </List>
             </Drawer>
