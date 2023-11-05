@@ -1,5 +1,5 @@
 import { Divider, Drawer, List, ListItem } from '@mui/material';
-import topics from '../assets/topics';
+import { topics } from '../constants';
 import { Link } from "react-router-dom";
 
 const SideMenu = () => {

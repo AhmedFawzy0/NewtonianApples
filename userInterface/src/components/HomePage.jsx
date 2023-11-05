@@ -3,7 +3,7 @@ import SectionWrapper from "../hoc/SectionWrapper";
 import "./Introduction.css"
 import SideMenu from "./SideMenu";
 import { apple } from "../assets";
-import simulations from "../assets/simulations";
+import { simulations } from "../constants";
 import Tilt from "react-parallax-tilt"
 
 const SimulationCard = ({id, name, description, image}) => {
@@ -15,7 +15,7 @@ const SimulationCard = ({id, name, description, image}) => {
             <p>
                 description
             </p>
-            <img src={image} alt={name} />
+            <img src={image} alt={name} className="simulation-demo"/>
         </Tilt>
     )
 }

@@ -1,5 +1,5 @@
-import topics from "./topics";
 import apple from "./Apple.png"
-import simulations from "./simulations";
+import backArrowIcon from "./backarrow.png"
+import colDemo from "./collisionsDemo.png"
 
-export { topics, apple, simulations }
+export { apple, backArrowIcon, colDemo }
