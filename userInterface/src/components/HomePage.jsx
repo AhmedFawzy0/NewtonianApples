@@ -6,15 +6,24 @@ import { apple } from "../assets";
 import { simulations } from "../constants";
 import Tilt from "react-parallax-tilt"
 
-const SimulationCard = ({id, name, description, image}) => {
+const SimulationCard = ({id, name, description, image, question}) => {
     return (
         <Tilt className="simulation-cards">
             <h3>
                 {name}
             </h3>
-            <p>
-                description
+            <p className="simulation-description">
+                {description}
             </p>
+
+            <br />
+            <ul className="simulation-question">
+                {question.map((item, index) => (
+                    <li key={`question${index}`}>
+                        {item}
+                    </li>
+                ))}
+            </ul>
             <img src={image} alt={name} className="simulation-demo"/>
         </Tilt>
     )
@@ -38,7 +47,7 @@ const Introduction = () => {
                     {simulations.map((simulation, index) => (
                         <SimulationCard id={simulation.id} name={simulation.name}
                             description={simulation.description} key={simulation.id}
-                            image={simulation.image}>
+                            image={simulation.image} question={simulation.question}>
                             {simulation.name}
                         </SimulationCard>
                     ))}
