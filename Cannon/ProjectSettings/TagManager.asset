@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Launcher
   - Ground
+  - projectile(Clone)
+  - projectile
   layers:
   - Default
   - TransparentFX

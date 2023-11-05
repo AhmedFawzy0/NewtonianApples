@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 55642778523670587}
   - component: {fileID: 4708743999353561058}
   - component: {fileID: 479351390182823587}
+  - component: {fileID: 4914230061300119118}
   m_Layer: 0
   m_Name: projectile
-  m_TagString: Untagged
+  m_TagString: projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 97
   m_Sprite: {fileID: -2413806693520163455, guid: e3368cb59209648bbb753521786b36d3, type: 3}
   m_Color: {r: 0.6792453, g: 0.57992166, b: 0.57992166, a: 1}
   m_FlipX: 0
@@ -147,7 +148,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 160744a81f5b240e19126c80329b43ac, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -158,3 +159,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4914230061300119118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428617630997484487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cfcaa6f4d1747abb641db14b7058f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  WaitTime: 2
+  projectile: {fileID: 0}
