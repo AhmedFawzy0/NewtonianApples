@@ -3,9 +3,12 @@
     color: slategrey;
     text-align: center;
     margin-left: auto;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-right: 130px;
+}
+
+.copyright {
+    margin-top: 100px;
 }

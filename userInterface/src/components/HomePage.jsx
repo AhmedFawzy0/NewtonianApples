@@ -3,6 +3,22 @@ import SectionWrapper from "../hoc/SectionWrapper";
 import "./Introduction.css"
 import SideMenu from "./SideMenu";
 import { apple } from "../assets";
+import simulations from "../assets/simulations";
+import Tilt from "react-parallax-tilt"
+
+const SimulationCard = ({id, name, description, image}) => {
+    return (
+        <Tilt className="simulation-cards">
+            <h3>
+                {name}
+            </h3>
+            <p>
+                description
+            </p>
+            <img src={image} alt={name} />
+        </Tilt>
+    )
+}
 
 const Introduction = () => {
     return (
@@ -11,7 +27,7 @@ const Introduction = () => {
                 <h1 className="introduction-appName">
                     Newtonian Apples
                 </h1>
-                <img src={apple} alt="appleIcon" className="project-icon"/>
+                <img src={apple} alt="appleIcon" className="project-icon" />
             </div>
             <div className="introduction-content">
                 <h2>
@@ -19,7 +35,13 @@ const Introduction = () => {
                 </h2>
 
                 <div className="introduction-topics">
-
+                    {simulations.map((simulation, index) => (
+                        <SimulationCard id={simulation.id} name={simulation.name}
+                            description={simulation.description} key={simulation.id}
+                            image={simulation.image}>
+                            {simulation.name}
+                        </SimulationCard>
+                    ))}
                 </div>
             </div>
         </div>

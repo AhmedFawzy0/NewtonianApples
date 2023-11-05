@@ -36,10 +36,21 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 60px;
 }
 
 .project-icon {
     max-width: 50px;
     max-height: 50px;
+}
+
+.simulation-cards {
+    max-width: 200px;
+    padding: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 30px;
+    border-color: slategray;
 }
 

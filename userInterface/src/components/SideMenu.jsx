@@ -1,5 +1,6 @@
 import { Divider, Drawer, List, ListItem } from '@mui/material';
 import topics from '../assets/topics';
+import { Link } from "react-router-dom";
 
 const SideMenu = () => {
     return (
@@ -23,34 +24,35 @@ const SideMenu = () => {
                     justifyContent: "center",
                     alignItems: "center"
                 }}>
-                    {topics.map((topic, index) => (
-                        <>
-                            <ListItem key={topic.id} sx={{
-                                minHeight: "80px",
-                                paddingBottom: "10%",
-                                paddingTop: "10%",
-                                width: "inherit",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                "&:hover": {
-                                    backgroundColor: "#E0E0E0",
-                                    borderRadius: "8px",
-                                    cursor: 'pointer'
-                                },
-                            }}>
-                                {topic.name}
-                            </ListItem>
-                            <Divider variant='middle' sx={{
-                                marginTop: "5px",
-                                marginBottom: "5px"
-                            }} />
-                        </>
+                    {topics.map((topic) => (
+                        <Link to={`/${topic.id}`}>
+                            <div key={topic.id}>
+                                <ListItem sx={{
+                                    minHeight: "80px",
+                                    paddingBottom: "10%",
+                                    paddingTop: "10%",
+                                    width: "inherit",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    "&:hover": {
+                                        backgroundColor: "#E0E0E0",
+                                        borderRadius: "8px",
+                                        cursor: 'pointer'
+                                    },
+                                }}>
+                                    {topic.name}
+                                </ListItem>
+                                <Divider variant='middle' sx={{
+                                    marginTop: "5px",
+                                    marginBottom: "5px"
+                                }} />
+                            </div>
+                        </Link>
                     ))}
                 </List>
             </Drawer>
         </div>
-
-    )
+    );
 }
 
-export default SideMenu;
+export default SideMenu
