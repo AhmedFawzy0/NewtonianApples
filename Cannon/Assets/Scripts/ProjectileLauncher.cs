@@ -5,6 +5,7 @@ public class ProjectileLauncher : MonoBehaviour
     public Transform launchPoint;
     public GameObject projectile;
     public float launchSpeed = 10f;
+    static public Vector3 startVelocity;
  
     [Header("****Trajectory Display****")]
     public LineRenderer lineRenderer;
@@ -28,12 +29,13 @@ public class ProjectileLauncher : MonoBehaviour
             var _projectile = Instantiate(projectile, launchPoint.position, launchPoint.rotation);
             _projectile.GetComponent<Rigidbody2D>().velocity = launchSpeed * launchPoint.up;
         }
+        launchSpeed = float.Parse(ReadVelocity.velocity);
     }
  
     void DrawTrajectory()
     {
         Vector3 origin = launchPoint.position;
-        Vector3 startVelocity = launchSpeed * launchPoint.up;
+        startVelocity = launchSpeed * launchPoint.up;
         lineRenderer.positionCount = linePoints;
         float time = 0;
         for (int i = 0; i < linePoints; i++)
