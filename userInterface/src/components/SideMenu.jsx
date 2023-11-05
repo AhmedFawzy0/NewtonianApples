@@ -12,7 +12,7 @@ const SideMenu = () => {
                 display: "flex",
                 flexDirection: "column",
                 width: "100%",
-                '& .MuiDrawer-paper': {
+                '& .MuiDrawer-paper': { 
                     justifyContent: "center",
                     minWidth: '130px', // Adjust the width as needed
                     margin: 'auto',
