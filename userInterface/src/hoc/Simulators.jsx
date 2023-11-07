@@ -6,7 +6,7 @@ import { backArrowIcon } from "../assets";
 
 // path takes in the path for the directory that contains
 // all the WebGL configuration files
-const Simulator = (path) => {
+const Simulator = (path, classname = "simulation") => {
     // We'll use a state to store the device pixel ratio.
     const [devicePixelRatio, setDevicePixelRatio] = useState(
         window.devicePixelRatio
@@ -50,7 +50,7 @@ const Simulator = (path) => {
                 className="backToHomeBtn"/>
             </Link>
             <Unity unityProvider={unityProvider} 
-            className="simulation"
+            className={`${classname}`}
             devicePixelRatio={devicePixelRatio} />
         </div>
     )
